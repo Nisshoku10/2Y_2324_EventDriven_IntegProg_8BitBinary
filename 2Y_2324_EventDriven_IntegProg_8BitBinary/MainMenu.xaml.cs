@@ -38,7 +38,9 @@ namespace _2Y_2324_EventDriven_IntegProg_8BitBinary
 
         private void About_Click(object sender, RoutedEventArgs e)
         {
-                
+            AboutUs aboutUs = new AboutUs();  
+            aboutUs.Show();
+            this.Close();
         }
     }
 }

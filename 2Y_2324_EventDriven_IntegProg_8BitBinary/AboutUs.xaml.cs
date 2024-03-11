@@ -23,5 +23,12 @@ namespace _2Y_2324_EventDriven_IntegProg_8BitBinary
         {
             InitializeComponent();
         }
+
+        private void btnBack_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Show();
+            this.Close();
+        }
     }
 }
