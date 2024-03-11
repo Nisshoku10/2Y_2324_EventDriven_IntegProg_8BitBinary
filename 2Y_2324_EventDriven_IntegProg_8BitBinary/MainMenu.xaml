@@ -20,17 +20,18 @@
             <Border BorderBrush="Black" BorderThickness="10, 10, 10, 5">
                 <Label Content="Bit Smasher" 
                        FontSize="40" FontWeight="ExtraBold"
-                       Background="#fff1db"
+                       Background="White"
                        Height="75" Width="275"
                        VerticalContentAlignment="Center"
                        HorizontalContentAlignment="Center"
-                       BorderBrush="#d0c3b0" BorderThickness="5"/>
+                       BorderBrush="Black" BorderThickness="5"/>
             </Border>
+
         </Grid>
         <Grid Grid.Row="1">
             <Image Source="Assets\Background.png" Stretch="UniformToFill"/>
             <Border BorderBrush="Black" BorderThickness="10, 5, 10, 10">
-                <Border Background="#b2a899" Width="200" Height="250" BorderThickness="5" BorderBrush="#d0c3b0">
+                <Border Background="White" Width="200" Height="250" BorderThickness="5" BorderBrush="Black">
                     <StackPanel Orientation="Vertical" Margin="-5,-5,-5,-5">
                         <Button x:Name="StartGame" Content ="Start Game" 
                                 Height="30" Width="150"

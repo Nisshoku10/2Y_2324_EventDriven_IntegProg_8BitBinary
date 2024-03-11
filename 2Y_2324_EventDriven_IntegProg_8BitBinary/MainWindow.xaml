@@ -8,7 +8,8 @@
         Title="MainWindow" Height="550" Width="550"
         ResizeMode="NoResize"
         FontFamily="Consolas"
-        WindowStartupLocation="CenterScreen">
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -16,25 +17,27 @@
             <RowDefinition/>
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
-            <Menu Height = "20" VerticalAlignment="Top" Background="#8d5524">
+            <Menu Height = "20" VerticalAlignment="Top" Background="Black" Foreground="White" BorderBrush="White">
                 <MenuItem Header="Main Menu" Background="Transparent" 
-                          BorderBrush="Black" BorderThickness="2, 2, 1, 2" 
+                          BorderBrush="White" BorderThickness="2, 2, 1, 2" 
                           FontSize="16" FontFamily="Consolas"
                           Click="MainMenu_Click" />
                 <MenuItem Header="Restart Game" Background="Transparent" 
-                          BorderBrush="Black" BorderThickness="1, 2, 1, 2" 
+                          BorderBrush="White" BorderThickness="1, 2, 1, 2" 
                           FontSize="16" Click="Restart_Click" FontFamily="Consolas"/>
                 <MenuItem Header="Exit Game" Background="Transparent" 
-                          BorderBrush="Black" BorderThickness="1, 2, 2, 2" 
+                          BorderBrush="White" BorderThickness="1, 2, 2, 2" 
                           FontSize="16" FontFamily="Consolas"
                           Click="Exit_Click" />
             </Menu>
         </Grid>
         <Grid Grid.Row="1">
-            <StackPanel Orientation="Vertical" Background="NavajoWhite">
+            <Image Source="Assets\TitleBackground2.png" Stretch="UniformToFill"/>
+            <StackPanel Orientation="Vertical">
                 <Label Content="Convert this number:" FontSize="20" 
                        VerticalAlignment="Center" HorizontalAlignment="Center"
-                       Margin="0, 40, 0, 10"/>
+                       Margin="0, 40, 0, 10"
+                       Background="White" BorderBrush="Black" BorderThickness="2"/>
                 <TextBox x:Name="tbConvNum" Text="1" IsReadOnly="True" 
                          Height="50" Width="300" 
                          BorderThickness="5"
@@ -44,15 +47,22 @@
                          VerticalContentAlignment="Center"/>
                 <StackPanel Orientation="Vertical" >
                     <Label x:Name="lbTimer" Content="60" FontSize="30" HorizontalContentAlignment="Center"
-                           BorderThickness="5" BorderBrush="RosyBrown"
-                           Width="60" Background="NavajoWhite"/>
+                           BorderThickness="5" BorderBrush="White"
+                           Foreground="White"
+                           Width="60" Background="Black"
+                           Margin="0, 0, 0, 10"/>
                     <Label Content="Remaining time" FontSize="15" HorizontalContentAlignment="Center"
-                           Width="200"/>
+                           Width="135" Background="White" BorderBrush="Black" BorderThickness="2"/>
                 </StackPanel>
             </StackPanel>
             <Label Content="Score:" FontSize="20" Margin="0, 0, 0, 0"
-                   BorderThickness="2"/>
-            <Label x:Name="lbScore" Content="0" FontSize="20" Foreground="Black"
+                   VerticalAlignment="Top" HorizontalAlignment="Left"
+                   BorderThickness="2" Foreground="White" Background="Black"
+                   Height="40"/>
+            <Label x:Name="lbScore" Content="0" FontSize="20" 
+                   Foreground="White" Background="Black"
+                   Height="40" Width="auto"
+                   VerticalAlignment="Top" HorizontalAlignment="Left"
                    BorderThickness="2" Margin="70, 0, 0, 0"/>
         </Grid>
         <Grid Grid.Row="2">
@@ -60,7 +70,7 @@
             <StackPanel Orientation="Vertical" Background="Transparent" Width="550">
                 <TextBox Text="Your answer:" FontSize="20" 
                          VerticalAlignment="Center" HorizontalAlignment="Center"
-                         Margin="0, 20, 0, 10"
+                         Margin="0, 20, 0, 20"
                          IsReadOnly="True"/>
                 <StackPanel Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Center">
                     <TextBox x:Name="tbBin128" Height="45" Width="45" Margin="10, 0, 10, 0"
@@ -141,7 +151,7 @@
                            BorderThickness="1" BorderBrush="Black"/>
                 </StackPanel>
                 <StackPanel Orientation="Horizontal">
-                    <Button x:Name="btn128" Height="20" Width="20" Background="green"
+                    <Button x:Name="btn128" Height="20" Width="20" Background="Red"
                             Margin="32, 0, 0 ,0" Click="btn128_Click"
                             BorderBrush="Black" BorderThickness="2"/>
                     <Button x:Name="btn64" Height="20" Width="20" Background="Red"
