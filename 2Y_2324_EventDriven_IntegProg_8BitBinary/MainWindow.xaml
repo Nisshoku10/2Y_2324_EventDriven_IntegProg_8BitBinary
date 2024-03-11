@@ -7,7 +7,8 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="550" Width="550"
         ResizeMode="NoResize"
-        FontFamily="Consolas">
+        FontFamily="Consolas"
+        WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="20"/>
@@ -16,14 +17,17 @@
         </Grid.RowDefinitions>
         <Grid Grid.Row="0">
             <Menu Height = "20" VerticalAlignment="Top" Background="#8d5524">
-                <MenuItem x:Name="Game" Header="Game" Height="auto" Width="auto" HorizontalContentAlignment ="Center" Background="Transparent" 
-                          BorderBrush="Black" FontSize="16" FontFamily="Consolas" Foreground="White">
-                    <MenuItem Header="Restart Game"/>
-                    <MenuItem Header="Exit Game" />
-                    <MenuItem Header="Main Menu" Height="auto" Width="auto" HorizontalContentAlignment ="Center" Background="#FF707070" BorderBrush="Black" FontSize="16" FontFamily="Consolas"/>
-                </MenuItem>
-                <MenuItem x:Name="About" Header="About" Height="auto" Width="auto" HorizontalContentAlignment ="Center" 
-                          Background="Transparent" BorderBrush="Black" FontSize="16" FontFamily="Consolas" Foreground="White"/>
+                <MenuItem Header="Main Menu" Background="Transparent" 
+                          BorderBrush="Black" BorderThickness="2, 2, 1, 2" 
+                          FontSize="16" FontFamily="Consolas"
+                          Click="MainMenu_Click" />
+                <MenuItem Header="Restart Game" Background="Transparent" 
+                          BorderBrush="Black" BorderThickness="1, 2, 1, 2" 
+                          FontSize="16" Click="Restart_Click" FontFamily="Consolas"/>
+                <MenuItem Header="Exit Game" Background="Transparent" 
+                          BorderBrush="Black" BorderThickness="1, 2, 2, 2" 
+                          FontSize="16" FontFamily="Consolas"
+                          Click="Exit_Click" />
             </Menu>
         </Grid>
         <Grid Grid.Row="1">

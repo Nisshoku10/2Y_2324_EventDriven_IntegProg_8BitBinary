@@ -5,13 +5,52 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_2Y_2324_EventDriven_IntegProg_8BitBinary"
         mc:Ignorable="d"
-        Title="MainMenu" Height="650" Width="750"
+        Title="MainMenu" Height="550" Width="550"
         ResizeMode="NoResize"
-        FontFamily="Consolas">
+        FontFamily="Consolas"
+        WindowStartupLocation="CenterScreen"
+        WindowStyle="None">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="150"/>
+            <RowDefinition Height="200"/>
             <RowDefinition/>
         </Grid.RowDefinitions>
+        <Grid Grid.Row="0">
+            <Image Source="Assets\TitleBackground2.png" Stretch="UniformToFill"/>
+            <Border BorderBrush="Black" BorderThickness="10, 10, 10, 5">
+                <Label Content="Bit Smasher" 
+                       FontSize="40" FontWeight="ExtraBold"
+                       Background="#fff1db"
+                       Height="75" Width="275"
+                       VerticalContentAlignment="Center"
+                       HorizontalContentAlignment="Center"
+                       BorderBrush="#d0c3b0" BorderThickness="5"/>
+            </Border>
+        </Grid>
+        <Grid Grid.Row="1">
+            <Image Source="Assets\Background.png" Stretch="UniformToFill"/>
+            <Border BorderBrush="Black" BorderThickness="10, 5, 10, 10">
+                <Border Background="#b2a899" Width="200" Height="250" BorderThickness="5" BorderBrush="#d0c3b0">
+                    <StackPanel Orientation="Vertical" Margin="-5,-5,-5,-5">
+                        <Button x:Name="StartGame" Content ="Start Game" 
+                                Height="30" Width="150"
+                                FontSize="20" FontWeight="Bold"
+                                Margin="0, 35, 0, 0" Click="StartGame_Click"/>
+                        <Button x:Name="About" Content ="About" 
+                                Height="30" Width="150"
+                                FontSize="20" FontWeight="Bold"
+                                Margin="0, 20, 0, 0" Click="About_Click"/>
+                        <Button x:Name="Leaderboards" Content ="Leaderboards" 
+                                Height="30" Width="150"
+                                FontSize="20" FontWeight="Bold"
+                                Margin="0, 20, 0, 0"/>
+                        <Button x:Name="Exit" Content ="Exit" 
+                                Height="30" Width="150"
+                                FontSize="20" FontWeight="Bold"
+                                Margin="0, 20, 0, 0" Click="Exit_Click"/>
+                    </StackPanel>
+                </Border>
+            </Border>
+        </Grid>
     </Grid>
 </Window>

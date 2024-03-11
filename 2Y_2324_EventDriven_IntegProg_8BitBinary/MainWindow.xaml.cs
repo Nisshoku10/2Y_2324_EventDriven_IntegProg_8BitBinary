@@ -170,5 +170,23 @@ namespace _2Y_2324_EventDriven_IntegProg_8BitBinary
                 lbScore.Content = _score;
             }
         }
+
+        private void MainMenu_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Show();
+            this.Close();
+        }
+
+        private void Restart_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            main.Show();
+            this.Close();
+        }
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            this.Close();
+        }
     }
 }
