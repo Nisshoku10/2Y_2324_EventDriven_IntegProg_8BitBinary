@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:_2Y_2324_EventDriven_IntegProg_8BitBinary"
         mc:Ignorable="d"
-        Title="MainMenu" Height="450" Width="550"
+        Title="MainMenu" Height="650" Width="750"
         ResizeMode="NoResize"
         FontFamily="Consolas">
     <Grid>
