@@ -39,65 +39,113 @@ namespace _2Y_2324_EventDriven_IntegProg_8BitBinary
         private void btn128_Click(object sender, RoutedEventArgs e)
         {
             if (tbBin128.Text == "0")
+            {
                 tbBin128.Text = "1";
+                btn128.Background = Brushes.Green;
+            }
             else
+            {
                 tbBin128.Text = "0";
+                btn128.Background = Brushes.Red;
+            }
         }
 
         private void btn64_Click(object sender, RoutedEventArgs e)
         {
             if (tbBin64.Text == "0")
+            {
                 tbBin64.Text = "1";
+                btn64.Background = Brushes.Green;
+            }
             else
+            {
                 tbBin64.Text = "0";
+                btn64.Background = Brushes.Red;
+            }
         }
 
         private void btn32_Click(object sender, RoutedEventArgs e)
         {
             if (tbBin32.Text == "0")
+            {
                 tbBin32.Text = "1";
+                btn32.Background = Brushes.Green;
+            }
             else
+            {
                 tbBin32.Text = "0";
+                btn32.Background = Brushes.Red;
+            }
         }
 
         private void btn16_Click(object sender, RoutedEventArgs e)
         {
             if (tbBin16.Text == "0")
+            {
                 tbBin16.Text = "1";
+                btn16.Background = Brushes.Green;
+            }
             else
+            {
                 tbBin16.Text = "0";
+                btn16.Background = Brushes.Red;
+            }
         }
 
         private void btn8_Click(object sender, RoutedEventArgs e)
         {
             if (tbBin8.Text == "0")
+            {
                 tbBin8.Text = "1";
+                btn8.Background = Brushes.Green;
+            }
             else
+            {
                 tbBin8.Text = "0";
+                btn8.Background = Brushes.Red;
+            }
         }
 
         private void btn4_Click(object sender, RoutedEventArgs e)
         {
             if (tbBin4.Text == "0")
+            {
                 tbBin4.Text = "1";
+                btn4.Background = Brushes.Green;
+            }
             else
+            {
                 tbBin4.Text = "0";
+                btn4.Background= Brushes.Red;
+            }
         }
 
         private void btn2_Click(object sender, RoutedEventArgs e)
         {
             if (tbBin2.Text == "0")
+            {
                 tbBin2.Text = "1";
+                btn2.Background = Brushes.Green;
+            }
             else
+            {
                 tbBin2.Text = "0";
+                btn2.Background= Brushes.Red;
+            }
         }
 
         private void btn1_Click(object sender, RoutedEventArgs e)
         {
             if (tbBin1.Text == "0")
+            {
                 tbBin1.Text = "1";
+                btn1.Background = Brushes.Green; 
+            }
             else
+            {
                 tbBin1.Text = "0";
+                btn1.Background= Brushes.Red;
+            }
         }
         #endregion
         #region DispatcherTimerEvents
