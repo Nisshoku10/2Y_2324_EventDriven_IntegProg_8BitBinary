@@ -44,7 +44,7 @@
                         <Button x:Name="Leaderboards" Content ="Leaderboards" 
                                 Height="30" Width="150"
                                 FontSize="20" FontWeight="Bold"
-                                Margin="0, 20, 0, 0"/>
+                                Margin="0, 20, 0, 0" Click="Leaderboards_Click"/>
                         <Button x:Name="Exit" Content ="Exit" 
                                 Height="30" Width="150"
                                 FontSize="20" FontWeight="Bold"

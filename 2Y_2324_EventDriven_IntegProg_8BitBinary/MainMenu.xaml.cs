@@ -42,5 +42,12 @@ namespace _2Y_2324_EventDriven_IntegProg_8BitBinary
             aboutUs.Show();
             this.Close();
         }
+
+        private void Leaderboards_Click(object sender, RoutedEventArgs e)
+        {
+            Leaderboards lb = new Leaderboards();
+            lb.Show();
+            this.Close();
+        }
     }
 }

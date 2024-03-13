@@ -25,10 +25,15 @@
                 <MenuItem Header="Restart Game" Background="Transparent" 
                           BorderBrush="White" BorderThickness="1, 2, 1, 2" 
                           FontSize="16" Click="Restart_Click" FontFamily="Consolas"/>
+                <MenuItem Header="Leaderboards" Background="Transparent" 
+                          BorderBrush="White" BorderThickness="1, 2, 1, 2" 
+                          FontSize="16" FontFamily="Consolas"
+                          Click="Exit_Click" />
                 <MenuItem Header="Exit Game" Background="Transparent" 
                           BorderBrush="White" BorderThickness="1, 2, 2, 2" 
                           FontSize="16" FontFamily="Consolas"
                           Click="Exit_Click" />
+
             </Menu>
         </Grid>
         <Grid Grid.Row="1">
@@ -46,7 +51,7 @@
                          HorizontalContentAlignment="Center"
                          VerticalContentAlignment="Center"/>
                 <StackPanel Orientation="Vertical" >
-                    <Label x:Name="lbTimer" Content="60" FontSize="30" HorizontalContentAlignment="Center"
+                    <Label x:Name="lbTimer" Content="90" FontSize="30" HorizontalContentAlignment="Center"
                            BorderThickness="5" BorderBrush="White"
                            Foreground="White"
                            Width="60" Background="Black"
@@ -64,6 +69,19 @@
                    Height="40" Width="auto"
                    VerticalAlignment="Top" HorizontalAlignment="Left"
                    BorderThickness="2" Margin="70, 0, 0, 0"/>
+            <Label Content="Round:" FontSize="20"
+                   Height="40" Width="auto"
+                   VerticalAlignment="Top" HorizontalAlignment="Right"
+                   BorderThickness="2" BorderBrush="Black"
+                   Background="Black" Foreground="White"
+                   Margin="0, 0, 20, 0"/>
+            <Label x:Name="lbRoundCount" Content="0"
+                   Foreground="White" Background="Black"
+                   Height="40" Width="auto"
+                   HorizontalAlignment="Right" VerticalAlignment="Top"
+                   FontSize="20"
+                   BorderBrush="Black" BorderThickness="2"
+                   Margin="0, 0, 5, 0"/>
         </Grid>
         <Grid Grid.Row="2">
             <Image Source="Assets\Background.png" Stretch="UniformToFill"/>

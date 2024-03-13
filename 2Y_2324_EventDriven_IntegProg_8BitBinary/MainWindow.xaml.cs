@@ -10,6 +10,7 @@ using System.Windows.Data;
 using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
+using System.Windows.Media.Animation;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
@@ -22,9 +23,12 @@ namespace _2Y_2324_EventDriven_IntegProg_8BitBinary
     /// </summary>
     public partial class MainWindow : Window
     {
-        int _score = 0;
+        private int _score = 0;
         DispatcherTimer _dt = null;
         Random _rnd = new Random();
+        private int _round = 1;
+        double _currentTime = 90;
+
         public MainWindow()
         {
             InitializeComponent();
@@ -33,6 +37,7 @@ namespace _2Y_2324_EventDriven_IntegProg_8BitBinary
             _dt.Interval = new TimeSpan(0, 0, 0, 1, 0);
             _dt.Start();
             tbConvNum.Text = _rnd.Next(0, 256).ToString();
+            lbRoundCount.Content = _round;
         }
 
         #region Button Events
@@ -206,10 +211,12 @@ namespace _2Y_2324_EventDriven_IntegProg_8BitBinary
             if (userAns == int.Parse(tbConvNum.Text))
             {
                 _score++;
+                _round++;
                 MessageBox.Show("Correct!");
                 tbConvNum.Text = _rnd.Next(0, 256).ToString();
                 lbScore.Content = _score;
-                _dt = new DispatcherTimer();
+                lbRoundCount.Content = _round;
+                ResetTimer();
             }
             else
             {
@@ -219,6 +226,26 @@ namespace _2Y_2324_EventDriven_IntegProg_8BitBinary
             }
         }
 
+        private void ResetTimer()
+        {
+            _dt.Stop();
+            _currentTime = _currentTime * 0.66;
+            lbTimer.Content = (int)_currentTime;
+            _dt.Start();
+        }
+        private bool isGameOver(string lbcontent)
+        {
+            if(_round != 10 || lbcontent != "0")
+            {
+                return false;
+            }
+            else
+            {
+                _dt.Stop();
+            }
+            return true;
+        }
+        #region Menu Items
         private void MainMenu_Click(object sender, RoutedEventArgs e)
         {
             MainMenu mainMenu = new MainMenu();
@@ -232,9 +259,16 @@ namespace _2Y_2324_EventDriven_IntegProg_8BitBinary
             main.Show();
             this.Close();
         }
+        private void Leaderboards_Click(object sender, RoutedEventArgs e)
+        {
+            Leaderboards lb = new Leaderboards();  
+            lb.Show();
+            this.Hide();
+        }
         private void Exit_Click(object sender, RoutedEventArgs e)
         {
             this.Close();
         }
+        #endregion
     }
 }
