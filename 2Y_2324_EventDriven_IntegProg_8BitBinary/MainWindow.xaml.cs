@@ -36,7 +36,7 @@ namespace _2Y_2324_EventDriven_IntegProg_8BitBinary
             _dt.Tick += _dt_Tick;
             _dt.Interval = new TimeSpan(0, 0, 0, 1, 0);
             _dt.Start();
-            tbConvNum.Text = _rnd.Next(0, 256).ToString();
+            tbConvNum.Text = _rnd.Next(0, 75).ToString();
             lbRoundCount.Content = _round;
         }
 
@@ -213,9 +213,10 @@ namespace _2Y_2324_EventDriven_IntegProg_8BitBinary
                 _score++;
                 _round++;
                 MessageBox.Show("Correct!");
-                tbConvNum.Text = _rnd.Next(0, 256).ToString();
+                tbConvNum.Text = _rnd.Next(0, 75).ToString();
                 lbScore.Content = _score;
                 lbRoundCount.Content = _round;
+                Reset();
                 ResetTimer();
             }
             else
@@ -270,5 +271,25 @@ namespace _2Y_2324_EventDriven_IntegProg_8BitBinary
             this.Close();
         }
         #endregion
+        private void Reset()
+        {
+            tbBin128.Text = "0";
+            tbBin64.Text = "0";
+            tbBin32.Text = "0";
+            tbBin16.Text = "0";
+            tbBin8.Text = "0";
+            tbBin4.Text = "0";
+            tbBin2.Text = "0";
+            tbBin1.Text = "0";
+
+            btn128.Background = Brushes.Red;
+            btn64.Background = Brushes.Red;
+            btn32.Background = Brushes.Red;
+            btn16.Background = Brushes.Red;
+            btn8.Background = Brushes.Red;
+            btn4.Background = Brushes.Red;
+            btn2.Background = Brushes.Red;
+            btn1.Background = Brushes.Red;
+        }
     }
 }
