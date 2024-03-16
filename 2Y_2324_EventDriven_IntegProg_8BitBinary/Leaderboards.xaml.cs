@@ -22,6 +22,23 @@ namespace _2Y_2324_EventDriven_IntegProg_8BitBinary
         public Leaderboards()
         {
             InitializeComponent();
+
+            // Define the columns
+            //List<GridViewColumn> columns = new List<GridViewColumn>();
+            //columns.Add(new GridViewColumn { Header = "Name" });
+            //columns.Add(new GridViewColumn { Header = "Age"});
+            //columns.Add(new GridViewColumn { Header = "City"});
+
+            //// Add some data
+            //Leaderboards.Items.Add(new { Name = "John", Age = 25, City = "New York" });
+            //Leaderboards.Items.Add(new { Name = "Jane", Age = 30, City = "Los Angeles" });
+            //Leaderboards.Items.Add(new { Name = "Tom", Age = 22, City = "Chicago" });
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            MainMenu mainMenu = new MainMenu();
+            mainMenu.Show();
+            this.Close();
         }
     }
 }

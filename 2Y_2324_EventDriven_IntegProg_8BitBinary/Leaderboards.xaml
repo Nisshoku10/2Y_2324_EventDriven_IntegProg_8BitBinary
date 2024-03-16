@@ -12,16 +12,25 @@
         FontFamily="Consolas">
     <Grid>
         <Image Source="Assets\Leaderboards.png" Stretch="UniformToFill"/>
-        <Border BorderBrush="Black" BorderThickness="10">
-            <Button Height="40" Width="100"
-                    Content="Go Back"
-                    FontSize="20" FontWeight="Bold"
-                    BorderBrush="White" BorderThickness="2"
-                    Background="Black" Foreground="White"
-                    VerticalAlignment="Bottom" HorizontalAlignment="Center"
-                    Margin="0, 0, 0, 30"/>
-        </Border>
-        <Label Content="LEADERBOARDS"/>
-        <Frame x:Name="rankOnDiff"/>
+        <Border BorderBrush="Black" BorderThickness="10"/>
+        <Button Content="Go Back" Height="40" Width="100"
+                Background="White" Foreground="Black"
+                FontSize="20"
+                VerticalAlignment="Bottom" HorizontalAlignment="Center"
+                Margin="0, 0, 0, 50"
+                BorderBrush="Black" BorderThickness="2" Click="Button_Click"/>
+        <ListView x:Name="Leaderboards" 
+                 Height="320" Width="420"
+                 FontSize="5" 
+                 VerticalContentAlignment="Center" HorizontalContentAlignment="Center">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Width="25"/>
+                    <GridViewColumn Width="130"/>
+                    <GridViewColumn Width="130"/>
+                    <GridViewColumn Width="130"/>
+                </GridView>
+            </ListView.View>
+        </ListView>
     </Grid>
 </Window>
